@@ -12,27 +12,27 @@
 
 MPU6050 accelgyro;
 
-int xbeeAddress = 1;
+int xbeeAddress = 3;
 
-void setup(void) 
+void setup() 
 {
   // join I2C bus (I2Cdev library doesn't do this automatically)
 #if I2CDEV_IMPLEMENTATION == I2CDEV_ARDUINO_WIRE
   Wire.begin();
 #elif I2CDEV_IMPLEMENTATION == I2CDEV_BUILTIN_FASTWIRE
-  Fastwire::setup(400, true);
-#endif
-
+  Fastwire::setup(400, false);
+#endif 
+  
   Serial.begin(38400);
   
   //Serial.println("Initializing I2C devices...");
   accelgyro.initialize();
 
   //Serial.println("Testing device connections...");
-  if(accelgyro.testConnection() == true)
+  accelgyro.testConnection();
     //Serial.println("MPU6050 connection successful");
 
-  delay(5000);
+  delay(10000);
 
 }
 

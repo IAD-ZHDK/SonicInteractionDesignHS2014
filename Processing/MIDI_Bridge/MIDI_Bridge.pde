@@ -9,7 +9,7 @@ import themidibus.*;           // Import the MIDI Bus Library: https://github.co
 Serial myXbeePort;             // The used Serial Port
 MidiBus myMidiBus;             // The used MIDI Port
 
-int xbeeAddress = 1;           // The Address we are listening to
+int xbeeAddress = 0;           // The Address we are listening to
 
 PVector accel = new PVector(); // Variable to store Accelerometer Data
 PVector gyro = new PVector();  // Variable to store Gyroscope Data
