@@ -23,7 +23,7 @@ void setup(void)
   Fastwire::setup(400, true);
 #endif
 
-  Serial.begin(9600);
+  Serial.begin(38400);
   
   //Serial.println("Initializing I2C devices...");
   accelgyro.initialize();

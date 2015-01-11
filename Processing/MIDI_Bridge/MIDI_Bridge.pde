@@ -20,7 +20,7 @@ void setup()
   size(500, 500);
 
   println(Serial.list()); // Prints the list of serial available devices (Arduino should be on top of the list)
-  myXbeePort = new Serial(this, "/dev/tty.usbserial-FTDE61DB", 9600); // Open a new port and connect with Arduino at 38400 baud
+  myXbeePort = new Serial(this, "/dev/tty.usbserial-FTDE61DB", 38400); // Open a new port and connect with Arduino at 38400 baud
   myXbeePort.buffer(22);
 
   MidiBus.list(); // List all available Midi devices
