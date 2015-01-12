@@ -56,7 +56,6 @@ sendControllerChange(channel, number, value);
 Could be found in the [github of the library](https://github.com/sparks/themidibus)
 
 ## 4 Wireless
-Unfortunately there are some issues with the I2C Bus and XBee. At the moment it is only possible to use the Analog pins in conjunction with the XBee.
 
 #####1. Parts
 For replacing the FTDI cable and using the XBee to establish a serial connection, we need at least:
