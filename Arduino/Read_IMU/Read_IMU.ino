@@ -12,7 +12,7 @@
 
 MPU6050 accelgyro;
 
-int xbeeAddress = 3;
+int xbeeAddress = 0;
 
 void setup() 
 {
@@ -25,14 +25,17 @@ void setup()
   
   Serial.begin(38400);
   
+  delay(1000);
+  
   //Serial.println("Initializing I2C devices...");
   accelgyro.initialize();
 
   //Serial.println("Testing device connections...");
-  accelgyro.testConnection();
+  if(accelgyro.testConnection() == true)
+    xbeeAddress = 3;
     //Serial.println("MPU6050 connection successful");
 
-  delay(10000);
+  delay(1000);
 
 }
 
@@ -43,7 +46,7 @@ void loop()
 
   //If MPU6050 is attached, read the acceleromter and gyroscope values
   accelgyro.getMotion6(&ax, &ay, &az, &gx, &gy, &gz);
-
+  
   //Read the analog ports
   adc0 = analogRead(0);
   adc1 = analogRead(1);
