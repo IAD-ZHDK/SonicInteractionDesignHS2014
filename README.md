@@ -15,7 +15,10 @@ The DATA_ACQ Board features:
 #####1. FDTI Drivers
 Download the latest FDTI drivers [here](http://www.ftdichip.com/drivers/VCP/MacOSX/FTDIUSBSerialDriver_v2_2_18.dmg) and install them into your computer. They are needed to connect to the DATA_ACQ.
 
-#####2. Arduino
+#####2. MIDI Setup
+To use MIDI in Processing you have to setup a MIDI IAC Bus as described in this link ["How to use the IAD Driver"](https://sites.google.com/site/mfalab/mac-stuff/how-to-use-the-iac-driver)
+
+#####3. Arduino
 Install the libraries "I2Cdev" and "MPU6050" from the Arduino folder by moving it to your local "Arduino/libraries" folder and restart the Arduino IDE. 
 
 1. Load the sketch "Read_IMU.ino"
@@ -24,16 +27,13 @@ Install the libraries "I2Cdev" and "MPU6050" from the Arduino folder by moving i
 4. Select the right port in the "Serial Port" menu
 5. Compile and upload the sketch
 
-#####3. Processing
+#####4. Processing
 Install the library "themidibus" form the Processing folder by moving it to your local "Processing/libraries" folder and restart the Processing IDE.
 
 1. Load the sketch "MIDI_Bridge.pde"
 2. In the setup choose the port corresponding with your FTDI cable (e.g. "/dev/tty.usbserial-FTDE61DB")
 3. Select the baud rate corresponding with the one in the Arduino sketch (default: 38400)
 4. Start the sketch and see values coming from the DATA_ACQ Board
-
-#####4. MIDI Setup
-To use MIDI in Processing you have to setup a MIDI IAC Bus as described in this link ["How to use the IAD Driver"](https://sites.google.com/site/mfalab/mac-stuff/how-to-use-the-iac-driver)
 
 ## 3 MIDI
 ##### Introduction
